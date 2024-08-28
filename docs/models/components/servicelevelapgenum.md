@@ -8,12 +8,16 @@
 | apg_eparcel_expedited | eParcel Expedited|
 
 
+## Example Usage
+
+```typescript
+import { ServiceLevelAPGEnum } from "shippo/models/components";
+
+let value: ServiceLevelAPGEnum = "eparcel_premium";
+```
 
 ## Values
 
-| Name                  | Value                 |
-| --------------------- | --------------------- |
-| `Epacket`             | epacket               |
-| `EpacketPlus`         | epacket_plus          |
-| `EparcelPremium`      | eparcel_premium       |
-| `ApgEparcelExpedited` | apg_eparcel_expedited |
+```typescript
+"epacket" | "epacket_plus" | "eparcel_premium" | "apg_eparcel_expedited"
+```

@@ -39,8 +39,8 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.ratesAtCheckout.create({
-  addressFrom: "<value>",
-  addressTo: "<value>",
+    addressFrom: "<value>",
+    addressTo: "<value>",
     lineItems: [
       {
         currency: "USD",
@@ -57,8 +57,100 @@ async function run() {
         objectId: "abf7d5675d744b6ea9fdb6f796b28f28",
       },
     ],
-  parcel: "5df144dca289442cv7a06",
+    parcel: {
+      extra: {
+        cod: {
+          amount: "5.5",
+          currency: "USD",
+          paymentMethod: "CASH",
+        },
+        insurance: {
+          amount: "5.5",
+          content: "Laptop",
+          currency: "USD",
+          provider: "UPS",
+        },
+      },
+      metadata: "Customer ID 123456",
+      massUnit: "lb",
+      weight: "1",
+      distanceUnit: "in",
+      height: "1",
+      length: "1",
+      width: "1",
+      objectCreated: new Date("2014-07-09T02:19:13.174Z"),
+      objectId: "adcfdddf8ec64b84ad22772bce3ea37a",
+      objectOwner: "shippotle@shippo.com",
+      objectState: "VALID",
+      objectUpdated: new Date("2014-07-09T02:19:13.174Z"),
+    },
   });
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { ShippoCore } from "shippo/core.js";
+import { ratesAtCheckoutCreate } from "shippo/funcs/ratesAtCheckoutCreate.js";
+
+// Use `ShippoCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const shippo = new ShippoCore({
+  apiKeyHeader: "<YOUR_API_KEY_HERE>",
+  shippoApiVersion: "2018-02-08",
+});
+
+async function run() {
+  const res = await ratesAtCheckoutCreate(shippo, {
+    addressFrom: "<value>",
+    addressTo: {
+      name: "Shwan Ippotle",
+      company: "Shippo",
+      street1: "215 Clayton St.",
+      street3: "",
+      streetNo: "",
+      city: "San Francisco",
+      state: "CA",
+      zip: "94117",
+      country: "US",
+      phone: "+1 555 341 9393",
+      email: "shippotle@shippo.com",
+      isResidential: true,
+      metadata: "Customer ID 123456",
+      validate: true,
+    },
+    lineItems: [
+      {
+        currency: "USD",
+        manufactureCountry: "US",
+        maxDeliveryTime: new Date("2016-07-23T00:00:00Z"),
+        maxShipTime: new Date("2016-07-23T00:00:00Z"),
+        quantity: 20,
+        sku: "HM-123",
+        title: "Hippo Magazines",
+        totalPrice: "12.1",
+        variantTitle: "June Edition",
+        weight: "0.4",
+        weightUnit: "lb",
+        objectId: "abf7d5675d744b6ea9fdb6f796b28f28",
+      },
+    ],
+    parcel: "5df144dca289442cv7a06",
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
 
   // Handle the result
   console.log(result)
@@ -74,16 +166,18 @@ run();
 | `request`                                                                                                                                                                      | [components.LiveRateCreateRequest](../../models/components/liveratecreaterequest.md)                                                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
 **Promise\<[components.LiveRatePaginatedList](../../models/components/liveratepaginatedlist.md)\>**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## getDefaultParcelTemplate
 
@@ -109,22 +203,55 @@ async function run() {
 run();
 ```
 
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { ShippoCore } from "shippo/core.js";
+import { ratesAtCheckoutGetDefaultParcelTemplate } from "shippo/funcs/ratesAtCheckoutGetDefaultParcelTemplate.js";
+
+// Use `ShippoCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const shippo = new ShippoCore({
+  apiKeyHeader: "<YOUR_API_KEY_HERE>",
+  shippoApiVersion: "2018-02-08",
+});
+
+async function run() {
+  const res = await ratesAtCheckoutGetDefaultParcelTemplate(shippo);
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+
 ### Parameters
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
 **Promise\<[components.DefaultParcelTemplate](../../models/components/defaultparceltemplate.md)\>**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## updateDefaultParcelTemplate
 
@@ -150,6 +277,37 @@ async function run() {
 run();
 ```
 
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { ShippoCore } from "shippo/core.js";
+import { ratesAtCheckoutUpdateDefaultParcelTemplate } from "shippo/funcs/ratesAtCheckoutUpdateDefaultParcelTemplate.js";
+
+// Use `ShippoCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const shippo = new ShippoCore({
+  apiKeyHeader: "<YOUR_API_KEY_HERE>",
+  shippoApiVersion: "2018-02-08",
+});
+
+async function run() {
+  const res = await ratesAtCheckoutUpdateDefaultParcelTemplate(shippo, "b958d3690bb04bb8b2986724872750f5");
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+
 ### Parameters
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    | Example                                                                                                                                                                        |
@@ -157,16 +315,18 @@ run();
 | `objectId`                                                                                                                                                                     | *string*                                                                                                                                                                       | :heavy_minus_sign:                                                                                                                                                             | N/A                                                                                                                                                                            | [object Object]                                                                                                                                                                |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |                                                                                                                                                                                |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |                                                                                                                                                                                |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |                                                                                                                                                                                |
 
 ### Response
 
 **Promise\<[components.DefaultParcelTemplate](../../models/components/defaultparceltemplate.md)\>**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## deleteDefaultParcelTemplate
 
@@ -191,17 +351,48 @@ async function run() {
 run();
 ```
 
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { ShippoCore } from "shippo/core.js";
+import { ratesAtCheckoutDeleteDefaultParcelTemplate } from "shippo/funcs/ratesAtCheckoutDeleteDefaultParcelTemplate.js";
+
+// Use `ShippoCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const shippo = new ShippoCore({
+  apiKeyHeader: "<YOUR_API_KEY_HERE>",
+  shippoApiVersion: "2018-02-08",
+});
+
+async function run() {
+  const res = await ratesAtCheckoutDeleteDefaultParcelTemplate(shippo);
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  
+}
+
+run();
+```
+
 ### Parameters
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
 **Promise\<void\>**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

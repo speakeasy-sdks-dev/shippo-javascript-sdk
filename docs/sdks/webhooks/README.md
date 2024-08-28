@@ -47,6 +47,42 @@ async function run() {
 run();
 ```
 
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { ShippoCore } from "shippo/core.js";
+import { webhooksCreateWebhook } from "shippo/funcs/webhooksCreateWebhook.js";
+
+// Use `ShippoCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const shippo = new ShippoCore({
+  apiKeyHeader: "<YOUR_API_KEY_HERE>",
+  shippoApiVersion: "2018-02-08",
+});
+
+async function run() {
+  const res = await webhooksCreateWebhook(shippo, {
+    event: "all",
+    url: "https://example.com/shippo-webhook",
+    active: true,
+    isTest: false,
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+
 ### Parameters
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
@@ -54,16 +90,18 @@ run();
 | `request`                                                                                                                                                                      | [components.WebhookUpdateRequest](../../models/components/webhookupdaterequest.md)                                                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
 **Promise\<[components.Webhook](../../models/components/webhook.md)\>**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## listWebhooks
 
@@ -89,22 +127,55 @@ async function run() {
 run();
 ```
 
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { ShippoCore } from "shippo/core.js";
+import { webhooksListWebhooks } from "shippo/funcs/webhooksListWebhooks.js";
+
+// Use `ShippoCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const shippo = new ShippoCore({
+  apiKeyHeader: "<YOUR_API_KEY_HERE>",
+  shippoApiVersion: "2018-02-08",
+});
+
+async function run() {
+  const res = await webhooksListWebhooks(shippo);
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+
 ### Parameters
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
 **Promise\<[components.WebhookPaginatedList](../../models/components/webhookpaginatedlist.md)\>**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## getWebhook
 
@@ -130,6 +201,37 @@ async function run() {
 run();
 ```
 
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { ShippoCore } from "shippo/core.js";
+import { webhooksGetWebhook } from "shippo/funcs/webhooksGetWebhook.js";
+
+// Use `ShippoCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const shippo = new ShippoCore({
+  apiKeyHeader: "<YOUR_API_KEY_HERE>",
+  shippoApiVersion: "2018-02-08",
+});
+
+async function run() {
+  const res = await webhooksGetWebhook(shippo, "<value>");
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+
 ### Parameters
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
@@ -137,16 +239,18 @@ run();
 | `webhookId`                                                                                                                                                                    | *string*                                                                                                                                                                       | :heavy_check_mark:                                                                                                                                                             | Object ID of the webhook to retrieve                                                                                                                                           |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
 **Promise\<[components.Webhook](../../models/components/webhook.md)\>**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## updateWebhook
 
@@ -177,6 +281,42 @@ async function run() {
 run();
 ```
 
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { ShippoCore } from "shippo/core.js";
+import { webhooksUpdateWebhook } from "shippo/funcs/webhooksUpdateWebhook.js";
+
+// Use `ShippoCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const shippo = new ShippoCore({
+  apiKeyHeader: "<YOUR_API_KEY_HERE>",
+  shippoApiVersion: "2018-02-08",
+});
+
+async function run() {
+  const res = await webhooksUpdateWebhook(shippo, "<value>", {
+    event: "batch_purchased",
+    url: "https://example.com/shippo-webhook",
+    active: true,
+    isTest: false,
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result)
+}
+
+run();
+```
+
 ### Parameters
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
@@ -185,16 +325,18 @@ run();
 | `webhookUpdateRequest`                                                                                                                                                         | [components.WebhookUpdateRequest](../../models/components/webhookupdaterequest.md)                                                                                             | :heavy_check_mark:                                                                                                                                                             | N/A                                                                                                                                                                            |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
 **Promise\<[components.Webhook](../../models/components/webhook.md)\>**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## deleteWebhook
 
@@ -219,6 +361,36 @@ async function run() {
 run();
 ```
 
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { ShippoCore } from "shippo/core.js";
+import { webhooksDeleteWebhook } from "shippo/funcs/webhooksDeleteWebhook.js";
+
+// Use `ShippoCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const shippo = new ShippoCore({
+  apiKeyHeader: "<YOUR_API_KEY_HERE>",
+  shippoApiVersion: "2018-02-08",
+});
+
+async function run() {
+  const res = await webhooksDeleteWebhook(shippo, "<value>");
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  
+}
+
+run();
+```
+
 ### Parameters
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
@@ -226,11 +398,12 @@ run();
 | `webhookId`                                                                                                                                                                    | *string*                                                                                                                                                                       | :heavy_check_mark:                                                                                                                                                             | Object ID of the webhook to delete                                                                                                                                             |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
 **Promise\<void\>**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

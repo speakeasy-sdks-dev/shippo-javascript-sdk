@@ -1,5 +1,15 @@
 # RemoveShipmentsFromBatchRequest
 
+## Example Usage
+
+```typescript
+import { RemoveShipmentsFromBatchRequest } from "shippo/models/operations";
+
+let value: RemoveShipmentsFromBatchRequest = {
+    batchId: "<value>",
+    requestBody: ["<value>"],
+};
+```
 
 ## Fields
 

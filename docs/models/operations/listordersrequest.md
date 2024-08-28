@@ -1,5 +1,15 @@
 # ListOrdersRequest
 
+## Example Usage
+
+```typescript
+import { ListOrdersRequest } from "shippo/models/operations";
+
+let value: ListOrdersRequest = {
+    orderStatus: ["PAID"],
+    shopApp: "Shippo",
+};
+```
 
 ## Fields
 

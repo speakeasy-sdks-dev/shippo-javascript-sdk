@@ -1,5 +1,16 @@
 # OrderPaginatedList
 
+## Example Usage
+
+```typescript
+import { OrderPaginatedList } from "shippo/models/components";
+
+let value: OrderPaginatedList = {
+    next: "baseurl?page=3&results=10",
+    previous: "baseurl?page=1&results=10",
+    results: [],
+};
+```
 
 ## Fields
 
