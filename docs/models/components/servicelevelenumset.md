@@ -1,5 +1,12 @@
 # ServiceLevelEnumSet
 
+## Example Usage
+
+```typescript
+import { ServiceLevelEnumSet } from "shippo/models/components";
+
+let value: ServiceLevelEnumSet = "veho_next_day";
+```
 
 ## Supported Types
 

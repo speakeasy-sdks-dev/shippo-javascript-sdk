@@ -1,5 +1,25 @@
 # CarrierAccountBase
 
+## Example Usage
+
+```typescript
+import { CarrierAccountBase } from "shippo/models/components";
+
+let value: CarrierAccountBase = {
+    accountId: "****",
+    carrier: "usps",
+    parameters: {
+        firstName: "Tyrel",
+        lastName: "Rosenbaum",
+        phoneNumber: "<value>",
+        fromAddressSt: "<value>",
+        fromAddressCity: "<value>",
+        fromAddressState: "<value>",
+        fromAddressZip: "<value>",
+        fromAddressCountryIso2: "<value>",
+    },
+};
+```
 
 ## Fields
 

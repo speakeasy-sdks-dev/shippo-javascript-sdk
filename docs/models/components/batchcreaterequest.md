@@ -1,5 +1,18 @@
 # BatchCreateRequest
 
+## Example Usage
+
+```typescript
+import { BatchCreateRequest } from "shippo/models/components";
+
+let value: BatchCreateRequest = {
+    defaultCarrierAccount: "078870331023437cb917f5187429b093",
+    defaultServicelevelToken: "usps_priority",
+    labelFiletype: "PDF_4x6",
+    metadata: "BATCH #1",
+    batchShipments: [],
+};
+```
 
 ## Fields
 

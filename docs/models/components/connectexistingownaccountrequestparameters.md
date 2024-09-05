@@ -1,5 +1,14 @@
 # ConnectExistingOwnAccountRequestParameters
 
+## Example Usage
+
+```typescript
+import { ConnectExistingOwnAccountRequestParameters } from "shippo/models/components";
+
+let value: ConnectExistingOwnAccountRequestParameters = {
+    key: "<value>",
+};
+```
 
 ## Supported Types
 

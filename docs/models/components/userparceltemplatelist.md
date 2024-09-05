@@ -1,5 +1,14 @@
 # UserParcelTemplateList
 
+## Example Usage
+
+```typescript
+import { UserParcelTemplateList } from "shippo/models/components";
+
+let value: UserParcelTemplateList = {
+    results: [],
+};
+```
 
 ## Fields
 

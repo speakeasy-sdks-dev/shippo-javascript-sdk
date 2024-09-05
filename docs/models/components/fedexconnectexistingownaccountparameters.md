@@ -1,5 +1,21 @@
 # FedExConnectExistingOwnAccountParameters
 
+## Example Usage
+
+```typescript
+import { FedExConnectExistingOwnAccountParameters } from "shippo/models/components";
+
+let value: FedExConnectExistingOwnAccountParameters = {
+    firstName: "Presley",
+    lastName: "Koepp",
+    phoneNumber: "<value>",
+    fromAddressSt: "<value>",
+    fromAddressCity: "<value>",
+    fromAddressState: "<value>",
+    fromAddressZip: "<value>",
+    fromAddressCountryIso2: "<value>",
+};
+```
 
 ## Fields
 

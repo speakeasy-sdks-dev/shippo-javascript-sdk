@@ -1,5 +1,17 @@
 # WebhookUpdateRequest
 
+## Example Usage
+
+```typescript
+import { WebhookUpdateRequest } from "shippo/models/components";
+
+let value: WebhookUpdateRequest = {
+    event: "transaction_updated",
+    url: "https://example.com/shippo-webhook",
+    active: true,
+    isTest: false,
+};
+```
 
 ## Fields
 
