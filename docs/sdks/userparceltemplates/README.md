@@ -143,13 +143,8 @@ const shippo = new ShippoCore({
 
 async function run() {
   const res = await userParcelTemplatesCreate(shippo, {
-    distanceUnit: "in",
-    height: "6",
-    length: "10",
-    name: "My Custom Template",
     weight: "12",
     weightUnit: "lb",
-    width: "8",
   });
 
   if (!res.ok) {

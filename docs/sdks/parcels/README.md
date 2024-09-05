@@ -170,7 +170,10 @@ async function run() {
     metadata: "Customer ID 123456",
     massUnit: "lb",
     weight: "1",
-    template: "Fastway_Australia_Satchel_A3",
+    distanceUnit: "in",
+    height: "1",
+    length: "1",
+    width: "1",
   });
 
   if (!res.ok) {

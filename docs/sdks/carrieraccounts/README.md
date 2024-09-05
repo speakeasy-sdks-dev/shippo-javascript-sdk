@@ -156,8 +156,8 @@ async function run() {
     carrier: "fedex",
     metadata: "FEDEX Account",
     parameters: {
-      firstName: "Edwardo",
-      lastName: "Collier",
+      firstName: "Jena",
+      lastName: "Nienow",
       phoneNumber: "<value>",
       fromAddressSt: "<value>",
       fromAddressCity: "<value>",
@@ -309,14 +309,14 @@ async function run() {
       currencyCode: "USD",
       email: "hippo@shippo.com",
       fullName: "Shippo Meister",
-      hasInvoice: false,
+      hasInvoice: true,
       invoiceControlid: "1234",
       invoiceDate: "20210529",
       invoiceNumber: "1112234",
       invoiceValue: "11.23",
       phone: "1112223333",
       title: "Manager",
-      upsAgreements: false,
+      upsAgreements: true,
     },
   });
   
@@ -347,14 +347,28 @@ async function run() {
     accountId: "****",
     carrier: "usps",
     parameters: {
-      firstName: "Afton",
-      lastName: "Hegmann",
-      phoneNumber: "<value>",
-      fromAddressSt: "<value>",
-      fromAddressCity: "<value>",
-      fromAddressState: "<value>",
-      fromAddressZip: "<value>",
-      fromAddressCountryIso2: "<value>",
+      accountNumber: "94567e",
+      aiaCountryIso2: "US",
+      billingAddressCity: "San Francisco",
+      billingAddressCountryIso2: "US",
+      billingAddressState: "CA",
+      billingAddressStreet1: "731 Market St",
+      billingAddressStreet2: "STE 200",
+      billingAddressZip: "94103",
+      collecCountryIso2: "US",
+      collecZip: "94103",
+      company: "Shippo",
+      currencyCode: "USD",
+      email: "hippo@shippo.com",
+      fullName: "Shippo Meister",
+      hasInvoice: true,
+      invoiceControlid: "1234",
+      invoiceDate: "20210529",
+      invoiceNumber: "1112234",
+      invoiceValue: "11.23",
+      phone: "1112223333",
+      title: "Manager",
+      upsAgreements: true,
     },
   });
 
@@ -432,7 +446,7 @@ const shippo = new ShippoCore({
 });
 
 async function run() {
-  const res = await carrierAccountsInitiateOauth2Signin(shippo, "<value>", "http://selfish-sinuosity.com");
+  const res = await carrierAccountsInitiateOauth2Signin(shippo, "<value>", "http://fine-cummerbund.biz");
 
   if (!res.ok) {
     throw res.error;
@@ -489,7 +503,26 @@ const shippo = new Shippo({
 async function run() {
   const result = await shippo.carrierAccounts.register({
     carrier: "colissimo",
-    parameters: {},
+    parameters: {
+      billingAddressCity: "San Francisco",
+      billingAddressCountryIso2: "US",
+      billingAddressState: "CA",
+      billingAddressStreet1: "731 Market St",
+      billingAddressStreet2: "STE 200",
+      billingAddressZip: "94103",
+      company: "Shippo",
+      email: "hippo@shippo.com",
+      fullName: "Shippo Meister",
+      phone: "1112223333",
+      pickupAddressCity: "San Francisco",
+      pickupAddressCountryIso2: "US",
+      pickupAddressSameAsBillingAddress: false,
+      pickupAddressState: "CA",
+      pickupAddressStreet1: "731 Market St",
+      pickupAddressStreet2: "STE 200",
+      pickupAddressZip: "94103",
+      upsAgreements: false,
+    },
   });
   
   // Handle the result
@@ -516,8 +549,27 @@ const shippo = new ShippoCore({
 
 async function run() {
   const res = await carrierAccountsRegister(shippo, {
-    carrier: "fedex",
-    parameters: {},
+    carrier: "colissimo",
+    parameters: {
+      billingAddressCity: "San Francisco",
+      billingAddressCountryIso2: "US",
+      billingAddressState: "CA",
+      billingAddressStreet1: "731 Market St",
+      billingAddressStreet2: "STE 200",
+      billingAddressZip: "94103",
+      company: "Shippo",
+      email: "hippo@shippo.com",
+      fullName: "Shippo Meister",
+      phone: "1112223333",
+      pickupAddressCity: "San Francisco",
+      pickupAddressCountryIso2: "US",
+      pickupAddressSameAsBillingAddress: false,
+      pickupAddressState: "CA",
+      pickupAddressStreet1: "731 Market St",
+      pickupAddressStreet2: "STE 200",
+      pickupAddressZip: "94103",
+      upsAgreements: false,
+    },
   });
 
   if (!res.ok) {
@@ -593,7 +645,7 @@ const shippo = new ShippoCore({
 });
 
 async function run() {
-  const res = await carrierAccountsGetRegistrationStatus(shippo, "canada_post");
+  const res = await carrierAccountsGetRegistrationStatus(shippo, "usps");
 
   if (!res.ok) {
     throw res.error;

@@ -57,33 +57,7 @@ async function run() {
         objectId: "abf7d5675d744b6ea9fdb6f796b28f28",
       },
     ],
-    parcel: {
-      extra: {
-        cod: {
-          amount: "5.5",
-          currency: "USD",
-          paymentMethod: "CASH",
-        },
-        insurance: {
-          amount: "5.5",
-          content: "Laptop",
-          currency: "USD",
-          provider: "UPS",
-        },
-      },
-      metadata: "Customer ID 123456",
-      massUnit: "lb",
-      weight: "1",
-      distanceUnit: "in",
-      height: "1",
-      length: "1",
-      width: "1",
-      objectCreated: new Date("2014-07-09T02:19:13.174Z"),
-      objectId: "adcfdddf8ec64b84ad22772bce3ea37a",
-      objectOwner: "shippotle@shippo.com",
-      objectState: "VALID",
-      objectUpdated: new Date("2014-07-09T02:19:13.174Z"),
-    },
+    parcel: "5df144dca289442cv7a06",
   });
   
   // Handle the result
@@ -111,22 +85,7 @@ const shippo = new ShippoCore({
 async function run() {
   const res = await ratesAtCheckoutCreate(shippo, {
     addressFrom: "<value>",
-    addressTo: {
-      name: "Shwan Ippotle",
-      company: "Shippo",
-      street1: "215 Clayton St.",
-      street3: "",
-      streetNo: "",
-      city: "San Francisco",
-      state: "CA",
-      zip: "94117",
-      country: "US",
-      phone: "+1 555 341 9393",
-      email: "shippotle@shippo.com",
-      isResidential: true,
-      metadata: "Customer ID 123456",
-      validate: true,
-    },
+    addressTo: "<value>",
     lineItems: [
       {
         currency: "USD",

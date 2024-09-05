@@ -64,7 +64,7 @@ const shippo = new ShippoCore({
 
 async function run() {
   const res = await webhooksCreateWebhook(shippo, {
-    event: "all",
+    event: "batch_created",
     url: "https://example.com/shippo-webhook",
     active: true,
     isTest: false,
@@ -298,7 +298,7 @@ const shippo = new ShippoCore({
 
 async function run() {
   const res = await webhooksUpdateWebhook(shippo, "<value>", {
-    event: "batch_purchased",
+    event: "batch_created",
     url: "https://example.com/shippo-webhook",
     active: true,
     isTest: false,

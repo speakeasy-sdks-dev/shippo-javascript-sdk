@@ -102,8 +102,8 @@ async function run() {
       buildingType: "apartment",
       instructions: "Behind screen door",
     },
-    requestedEndTime: new Date("2023-04-03T12:48:32.050Z"),
-    requestedStartTime: new Date("2022-11-13T02:16:42.101Z"),
+    requestedEndTime: new Date("2023-06-18T07:14:55.676Z"),
+    requestedStartTime: new Date("2023-06-21T08:42:38.998Z"),
     transactions: [
       "adcfdddf8ec64b84ad22772bce3ea37a",
     ],
