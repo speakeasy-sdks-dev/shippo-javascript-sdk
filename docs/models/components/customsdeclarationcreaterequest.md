@@ -1,5 +1,59 @@
 # CustomsDeclarationCreateRequest
 
+## Example Usage
+
+```typescript
+import { CustomsDeclarationCreateRequest } from "shippo/models/components";
+
+let value: CustomsDeclarationCreateRequest = {
+  b13aFilingOption: "FILED_ELECTRONICALLY",
+  certify: true,
+  certifySigner: "Shawn Ippotle",
+  contentsExplanation: "T-Shirt purchase",
+  exporterIdentification: {
+    eoriNumber: "PL123456790ABCDE",
+    taxId: {
+      number: "123456789",
+      type: "EIN",
+    },
+  },
+  invoice: "#123123",
+  metadata: "Order ID #123123",
+  addressImporter: {
+    name: "Shwan Ippotle",
+    company: "Shippo",
+    street1: "Blumenstraße",
+    street3: "",
+    streetNo: "22",
+    city: "München",
+    state: "CA",
+    zip: "80331",
+    country: "DE",
+    phone: "80331",
+    email: "shippotle@shippo.com",
+    isResidential: true,
+  },
+  contentsType: "MERCHANDISE",
+  eelPfc: "NOEEI_30_37_a",
+  incoterm: "DDP",
+  items: [
+    {
+      description: "T-Shirt",
+      massUnit: "lb",
+      metadata: "Order ID \"123454\"",
+      netWeight: "5",
+      originCountry: "<value>",
+      quantity: 20,
+      skuCode: "HM-123",
+      hsCode: "0901.21",
+      valueAmount: "200",
+      valueCurrency: "USD",
+    },
+  ],
+  nonDeliveryOption: "RETURN",
+  test: true,
+};
+```
 
 ## Fields
 
@@ -26,6 +80,6 @@
 | `contentsType`                                                                                                                                                                                                                                                                                                                | [components.CustomsDeclarationContentsTypeEnum](../../models/components/customsdeclarationcontentstypeenum.md)                                                                                                                                                                                                                | :heavy_check_mark:                                                                                                                                                                                                                                                                                                            | N/A                                                                                                                                                                                                                                                                                                                           | MERCHANDISE                                                                                                                                                                                                                                                                                                                   |
 | `eelPfc`                                                                                                                                                                                                                                                                                                                      | [components.CustomsDeclarationEelPfcEnum](../../models/components/customsdeclarationeelpfcenum.md)                                                                                                                                                                                                                            | :heavy_minus_sign:                                                                                                                                                                                                                                                                                                            | N/A                                                                                                                                                                                                                                                                                                                           | NOEEI_30_37_a                                                                                                                                                                                                                                                                                                                 |
 | `incoterm`                                                                                                                                                                                                                                                                                                                    | [components.CustomsDeclarationIncotermEnum](../../models/components/customsdeclarationincotermenum.md)                                                                                                                                                                                                                        | :heavy_minus_sign:                                                                                                                                                                                                                                                                                                            | N/A                                                                                                                                                                                                                                                                                                                           | DDP                                                                                                                                                                                                                                                                                                                           |
-| `items`                                                                                                                                                                                                                                                                                                                       | [components.CustomsItemCreateRequest](../../models/components/customsitemcreaterequest.md)[]                                                                                                                                                                                                                                  | :heavy_check_mark:                                                                                                                                                                                                                                                                                                            | N/A                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                               |
+| `items`                                                                                                                                                                                                                                                                                                                       | [components.CustomsItemBase](../../models/components/customsitembase.md)[]                                                                                                                                                                                                                                                    | :heavy_check_mark:                                                                                                                                                                                                                                                                                                            | N/A                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                               |
 | `nonDeliveryOption`                                                                                                                                                                                                                                                                                                           | [components.CustomsDeclarationNonDeliveryOptionEnum](../../models/components/customsdeclarationnondeliveryoptionenum.md)                                                                                                                                                                                                      | :heavy_check_mark:                                                                                                                                                                                                                                                                                                            | N/A                                                                                                                                                                                                                                                                                                                           | RETURN                                                                                                                                                                                                                                                                                                                        |
 | `test`                                                                                                                                                                                                                                                                                                                        | *boolean*                                                                                                                                                                                                                                                                                                                     | :heavy_minus_sign:                                                                                                                                                                                                                                                                                                            | N/A                                                                                                                                                                                                                                                                                                                           | true                                                                                                                                                                                                                                                                                                                          |

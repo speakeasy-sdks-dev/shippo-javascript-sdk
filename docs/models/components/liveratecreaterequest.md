@@ -1,5 +1,58 @@
 # LiveRateCreateRequest
 
+## Example Usage
+
+```typescript
+import { LiveRateCreateRequest } from "shippo/models/components";
+
+let value: LiveRateCreateRequest = {
+  addressFrom: "<value>",
+  addressTo: "<value>",
+  lineItems: [
+    {
+      currency: "USD",
+      manufactureCountry: "US",
+      maxDeliveryTime: new Date("2016-07-23T00:00:00Z"),
+      maxShipTime: new Date("2016-07-23T00:00:00Z"),
+      quantity: 20,
+      sku: "HM-123",
+      title: "Hippo Magazines",
+      totalPrice: "12.1",
+      variantTitle: "June Edition",
+      weight: "0.4",
+      weightUnit: "lb",
+      objectId: "abf7d5675d744b6ea9fdb6f796b28f28",
+    },
+  ],
+  parcel: {
+    extra: {
+      cod: {
+        amount: "5.5",
+        currency: "USD",
+        paymentMethod: "CASH",
+      },
+      insurance: {
+        amount: "5.5",
+        content: "Laptop",
+        currency: "USD",
+        provider: "UPS",
+      },
+    },
+    metadata: "Customer ID 123456",
+    massUnit: "lb",
+    weight: "1",
+    distanceUnit: "in",
+    height: "1",
+    length: "1",
+    width: "1",
+    objectCreated: new Date("2014-07-09T02:19:13.174Z"),
+    objectId: "adcfdddf8ec64b84ad22772bce3ea37a",
+    objectOwner: "shippotle@shippo.com",
+    objectState: "VALID",
+    objectUpdated: new Date("2014-07-09T02:19:13.174Z"),
+  },
+};
+```
 
 ## Fields
 

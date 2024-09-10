@@ -1,5 +1,30 @@
 # Parcels
 
+## Example Usage
+
+```typescript
+import { Parcels } from "shippo/models/components";
+
+let value: Parcels = {
+  extra: {
+    cod: {
+      amount: "5.5",
+      currency: "USD",
+      paymentMethod: "CASH",
+    },
+    insurance: {
+      amount: "5.5",
+      content: "Laptop",
+      currency: "USD",
+      provider: "UPS",
+    },
+  },
+  metadata: "Customer ID 123456",
+  massUnit: "lb",
+  weight: "1",
+  template: "USPS_LargeFlatRateBox",
+};
+```
 
 ## Supported Types
 

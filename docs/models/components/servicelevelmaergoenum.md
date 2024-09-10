@@ -5,9 +5,16 @@
 | x_delivery_expedited | Expedited|
 
 
+## Example Usage
+
+```typescript
+import { ServiceLevelMaergoEnum } from "shippo/models/components";
+
+let value: ServiceLevelMaergoEnum = "x_delivery_expedited";
+```
 
 ## Values
 
-| Name                 | Value                |
-| -------------------- | -------------------- |
-| `XDeliveryExpedited` | x_delivery_expedited |
+```typescript
+"x_delivery_expedited"
+```

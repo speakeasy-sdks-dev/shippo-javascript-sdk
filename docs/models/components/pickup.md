@@ -1,5 +1,49 @@
 # Pickup
 
+## Example Usage
+
+```typescript
+import { Pickup } from "shippo/models/components";
+
+let value: Pickup = {
+  carrierAccount: "adcfdddf8ec64b84ad22772bce3ea37a",
+  location: {
+    address: {
+      name: "Shwan Ippotle",
+      company: "Shippo",
+      street1: "215 Clayton St.",
+      street3: "",
+      streetNo: "",
+      city: "San Francisco",
+      state: "CA",
+      zip: "94117",
+      country: "US",
+      phone: "+1 555 341 9393",
+      email: "shippotle@shippo.com",
+      isResidential: true,
+      metadata: "Customer ID 123456",
+      validate: true,
+    },
+    buildingLocationType: "Front Door",
+    buildingType: "apartment",
+    instructions: "Behind screen door",
+  },
+  requestedEndTime: new Date("2022-12-22T06:12:17.901Z"),
+  requestedStartTime: new Date("2023-11-08T22:17:03.172Z"),
+  transactions: [
+    "adcfdddf8ec64b84ad22772bce3ea37a",
+  ],
+  confirmedStartTime: "2020-05-09T12:00:00Z",
+  confirmedEndTime: "2020-05-09T23:59:59.999Z",
+  cancelByTime: "2020-05-09T08:00:00Z",
+  status: "CONFIRMED",
+  confirmationCode: "WTC310058750",
+  timezone: "US/Pacific",
+  messages: [
+    "<value>",
+  ],
+};
+```
 
 ## Fields
 

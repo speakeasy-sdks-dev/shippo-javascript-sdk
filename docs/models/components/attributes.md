@@ -1,10 +1,15 @@
 # Attributes
 
+## Example Usage
+
+```typescript
+import { Attributes } from "shippo/models/components";
+
+let value: Attributes = "BESTVALUE";
+```
 
 ## Values
 
-| Name        | Value       |
-| ----------- | ----------- |
-| `Bestvalue` | BESTVALUE   |
-| `Cheapest`  | CHEAPEST    |
-| `Fastest`   | FASTEST     |
+```typescript
+"BESTVALUE" | "CHEAPEST" | "FASTEST"
+```

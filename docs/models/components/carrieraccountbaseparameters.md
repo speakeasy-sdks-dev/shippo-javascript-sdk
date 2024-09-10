@@ -1,5 +1,21 @@
 # CarrierAccountBaseParameters
 
+## Example Usage
+
+```typescript
+import { CarrierAccountBaseParameters } from "shippo/models/components";
+
+let value: CarrierAccountBaseParameters = {
+  firstName: "Kristina",
+  lastName: "Conroy",
+  phoneNumber: "<value>",
+  fromAddressSt: "<value>",
+  fromAddressCity: "<value>",
+  fromAddressState: "<value>",
+  fromAddressZip: "<value>",
+  fromAddressCountryIso2: "<value>",
+};
+```
 
 ## Supported Types
 
