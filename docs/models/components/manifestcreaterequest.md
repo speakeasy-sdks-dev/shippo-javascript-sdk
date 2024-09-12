@@ -1,5 +1,34 @@
 # ManifestCreateRequest
 
+## Example Usage
+
+```typescript
+import { ManifestCreateRequest } from "shippo/models/components";
+
+let value: ManifestCreateRequest = {
+  carrierAccount: "adcfdddf8ec64b84ad22772bce3ea37a",
+  shipmentDate: "2014-05-16T23:59:59Z",
+  transactions: [
+    "adcfdddf8ec64b84ad22772bce3ea37a",
+  ],
+  addressFrom: {
+    name: "Shwan Ippotle",
+    company: "Shippo",
+    street1: "215 Clayton St.",
+    street3: "",
+    streetNo: "",
+    city: "San Francisco",
+    state: "CA",
+    zip: "94117",
+    country: "US",
+    phone: "+1 555 341 9393",
+    email: "shippotle@shippo.com",
+    isResidential: true,
+    metadata: "Customer ID 123456",
+    validate: true,
+  },
+};
+```
 
 ## Fields
 

@@ -1,5 +1,15 @@
 # AddShipmentsToBatchRequest
 
+## Example Usage
+
+```typescript
+import { AddShipmentsToBatchRequest } from "shippo/models/operations";
+
+let value: AddShipmentsToBatchRequest = {
+  batchId: "<value>",
+  requestBody: [],
+};
+```
 
 ## Fields
 

@@ -2,6 +2,16 @@
 
 Examples.
 
+## Example Usage
+
+```typescript
+import { RegisterCarrierAccountRequestBody } from "shippo/models/operations";
+
+let value: RegisterCarrierAccountRequestBody = {
+  carrier: "dpd_uk",
+  parameters: {},
+};
+```
 
 ## Supported Types
 
