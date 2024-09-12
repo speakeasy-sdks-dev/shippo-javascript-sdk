@@ -21,7 +21,7 @@
 import { ServiceLevelCouriersPleaseEnum } from "shippo/models/components";
 
 let value: ServiceLevelCouriersPleaseEnum =
-  "couriersplease_off_peak_sign_required";
+  "couriersplease_domestic_priority_sign_required";
 ```
 
 ## Values

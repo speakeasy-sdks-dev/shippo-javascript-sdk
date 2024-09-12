@@ -29,8 +29,7 @@
 ```typescript
 import { ServiceLevelRoyalMailEnum } from "shippo/models/components";
 
-let value: ServiceLevelRoyalMailEnum =
-  "royal_mail_intl_bus_parcels_tracked_country_priced";
+let value: ServiceLevelRoyalMailEnum = "royal_mail_24_flat_rate";
 ```
 
 ## Values

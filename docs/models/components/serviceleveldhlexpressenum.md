@@ -31,7 +31,7 @@
 ```typescript
 import { ServiceLevelDHLExpressEnum } from "shippo/models/components";
 
-let value: ServiceLevelDHLExpressEnum = "dhl_express_express_9_00_nondoc";
+let value: ServiceLevelDHLExpressEnum = "dhl_express_break_bulk_economy_doc";
 ```
 
 ## Values

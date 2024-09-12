@@ -15,10 +15,10 @@ let value: Manifest = {
   documents: [
     "https://shippo-delivery.s3.amazonaws.com/0fadebf6f60c4aca95fa01bcc59c79ae.pdf?Signature=tlQU3RECwdHUQJQadwqg5bAzGFQ%3D&Expires=1402803835&AWSAccessKeyId=AKIAJTHP3LLFMYAWALIA",
   ],
-  objectCreated: new Date("2022-08-26T08:08:26.098Z"),
+  objectCreated: new Date("2024-11-17T00:12:05.684Z"),
   objectId: "adcfdddf8ec64b84ad22772bce3ea37a",
   objectOwner: "shippotle@shippo.com",
-  objectUpdated: new Date("2023-09-16T00:05:11.677Z"),
+  objectUpdated: new Date("2022-04-22T20:11:11.754Z"),
   status: "SUCCESS",
 };
 ```

@@ -19,8 +19,7 @@
 ```typescript
 import { ServiceLevelAustraliaPostEnum } from "shippo/models/components";
 
-let value: ServiceLevelAustraliaPostEnum =
-  "australia_post_international_express";
+let value: ServiceLevelAustraliaPostEnum = "australia_post_parcel_post_return";
 ```
 
 ## Values

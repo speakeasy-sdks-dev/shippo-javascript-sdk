@@ -22,7 +22,7 @@
 ```typescript
 import { ServiceLevelePostGlobalEnum } from "shippo/models/components";
 
-let value: ServiceLevelePostGlobalEnum = "rr_donnelley_courier";
+let value: ServiceLevelePostGlobalEnum = "rr_donnelley_economy_parcel";
 ```
 
 ## Values

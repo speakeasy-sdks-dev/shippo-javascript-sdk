@@ -9,9 +9,9 @@ let value: CarrierAccountBase = {
   accountId: "****",
   carrier: "usps",
   parameters: {
-    firstName: "Tyrel",
-    lastName: "Rosenbaum",
-    phoneNumber: "<value>",
+    firstName: "Floy",
+    lastName: "Moore",
+    phoneNumber: "1-960-296-6612 x317",
     fromAddressSt: "<value>",
     fromAddressCity: "<value>",
     fromAddressState: "<value>",

@@ -37,7 +37,8 @@
 ```typescript
 import { ServiceLevelDHLeCommerceEnum } from "shippo/models/components";
 
-let value: ServiceLevelDHLeCommerceEnum = "dhl_ecommerce_parcels_expedited_max";
+let value: ServiceLevelDHLeCommerceEnum =
+  "dhl_ecommerce_globalmail_business_standard";
 ```
 
 ## Values

@@ -8,7 +8,7 @@ import { UpdateWebhookRequest } from "shippo/models/operations";
 let value: UpdateWebhookRequest = {
   webhookId: "<value>",
   webhookUpdateRequest: {
-    event: "all",
+    event: "transaction_updated",
     url: "https://example.com/shippo-webhook",
     active: true,
     isTest: false,

@@ -28,8 +28,8 @@ let value: PickupBase = {
     buildingType: "apartment",
     instructions: "Behind screen door",
   },
-  requestedEndTime: new Date("2022-06-14T01:02:51.421Z"),
-  requestedStartTime: new Date("2023-11-02T20:33:57.181Z"),
+  requestedEndTime: new Date("2024-12-26T20:21:35.186Z"),
+  requestedStartTime: new Date("2023-12-17T19:21:40.693Z"),
   transactions: [
     "adcfdddf8ec64b84ad22772bce3ea37a",
   ],

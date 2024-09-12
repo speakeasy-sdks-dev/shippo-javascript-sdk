@@ -7,7 +7,7 @@ Indicates the validity of the enclosing object
 ```typescript
 import { ObjectStateEnum } from "shippo/models/components";
 
-let value: ObjectStateEnum = "INVALID";
+let value: ObjectStateEnum = "VALID";
 ```
 
 ## Values
