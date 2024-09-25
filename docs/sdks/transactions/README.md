@@ -31,9 +31,9 @@ async function run() {
     objectStatus: "SUCCESS",
     trackingStatus: "DELIVERED",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -67,7 +67,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -114,9 +114,9 @@ async function run() {
     metadata: "Order ID #12345",
     rate: "ec9f0d3adc9441449c85d315f0997fd5",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -152,7 +152,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -194,9 +194,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.transactions.get("<value>");
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -227,7 +227,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();

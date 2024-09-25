@@ -5,7 +5,7 @@
 ```typescript
 import { ServiceLevelEnumSet } from "shippo/models/components";
 
-let value: ServiceLevelEnumSet = "uds_next_day";
+let value: ServiceLevelEnumSet = "fedex_2_day";
 ```
 
 ## Supported Types

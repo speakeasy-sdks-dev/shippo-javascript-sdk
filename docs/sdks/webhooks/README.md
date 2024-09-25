@@ -39,9 +39,9 @@ async function run() {
     active: true,
     isTest: false,
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -77,7 +77,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -119,9 +119,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.webhooks.listWebhooks();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -152,7 +152,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -193,9 +193,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.webhooks.getWebhook("<value>");
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -226,7 +226,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -273,9 +273,9 @@ async function run() {
     active: true,
     isTest: false,
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -311,7 +311,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -354,6 +354,8 @@ const shippo = new Shippo({
 
 async function run() {
   await shippo.webhooks.deleteWebhook("<value>");
+
+
 }
 
 run();

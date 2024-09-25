@@ -74,9 +74,9 @@ async function run() {
     ],
     parcel: "5df144dca289442cv7a06",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -142,7 +142,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -184,9 +184,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.ratesAtCheckout.getDefaultParcelTemplate();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -217,7 +217,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -258,9 +258,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.ratesAtCheckout.updateDefaultParcelTemplate("b958d3690bb04bb8b2986724872750f5");
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -291,7 +291,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -333,6 +333,8 @@ const shippo = new Shippo({
 
 async function run() {
   await shippo.ratesAtCheckout.deleteDefaultParcelTemplate();
+
+
 }
 
 run();

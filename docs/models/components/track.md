@@ -40,9 +40,9 @@ let value: Track = {
         state: "NV",
         zip: "89101",
       },
-      objectCreated: new Date("2024-07-18T10:00:30.471Z"),
+      objectCreated: new Date("2023-11-06T15:40:43.604Z"),
       objectId: "<value>",
-      objectUpdated: new Date("2024-06-03T19:43:04.405Z"),
+      objectUpdated: new Date("2022-05-16T16:57:38.984Z"),
       status: "DELIVERED",
       substatus: {
         code: "information_received",
@@ -62,9 +62,9 @@ let value: Track = {
       state: "NV",
       zip: "89101",
     },
-    objectCreated: new Date("2023-09-16T17:37:32.983Z"),
+    objectCreated: new Date("2024-07-18T10:00:30.471Z"),
     objectId: "<value>",
-    objectUpdated: new Date("2023-03-23T06:32:58.021Z"),
+    objectUpdated: new Date("2024-06-03T19:43:04.405Z"),
     status: "DELIVERED",
     substatus: {
       code: "information_received",

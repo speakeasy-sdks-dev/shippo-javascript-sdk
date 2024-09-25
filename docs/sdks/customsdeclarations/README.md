@@ -29,9 +29,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.customsDeclarations.list();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -62,7 +62,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -161,9 +161,9 @@ async function run() {
     nonDeliveryOption: "RETURN",
     test: true,
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -250,7 +250,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -292,9 +292,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.customsDeclarations.get("<value>");
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -325,7 +325,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();

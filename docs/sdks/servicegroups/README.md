@@ -30,9 +30,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.serviceGroups.list();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -63,7 +63,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -119,9 +119,9 @@ async function run() {
       },
     ],
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -167,7 +167,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -234,9 +234,9 @@ async function run() {
       },
     ],
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -292,7 +292,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -334,6 +334,8 @@ const shippo = new Shippo({
 
 async function run() {
   await shippo.serviceGroups.delete("<value>");
+
+
 }
 
 run();

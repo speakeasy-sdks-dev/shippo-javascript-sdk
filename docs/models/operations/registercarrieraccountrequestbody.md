@@ -8,7 +8,7 @@ Examples.
 import { RegisterCarrierAccountRequestBody } from "shippo/models/operations";
 
 let value: RegisterCarrierAccountRequestBody = {
-  carrier: "correos",
+  carrier: "colissimo",
   parameters: {},
 };
 ```

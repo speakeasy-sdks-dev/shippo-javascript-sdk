@@ -37,9 +37,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.carrierAccounts.list({});
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -70,7 +70,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -127,9 +127,9 @@ async function run() {
     },
     test: false,
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -175,7 +175,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -217,9 +217,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.carrierAccounts.get("<value>");
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -250,7 +250,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -319,9 +319,9 @@ async function run() {
       upsAgreements: true,
     },
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -379,7 +379,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -422,9 +422,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.carrierAccounts.initiateOauth2Signin("<value>", "https://enlightened-mortise.com/");
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -455,7 +455,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -502,7 +502,7 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.carrierAccounts.register({
-    carrier: "correos",
+    carrier: "ups",
     parameters: {
       billingAddressCity: "San Francisco",
       billingAddressCountryIso2: "US",
@@ -521,12 +521,12 @@ async function run() {
       pickupAddressStreet1: "731 Market St",
       pickupAddressStreet2: "STE 200",
       pickupAddressZip: "94103",
-      upsAgreements: false,
+      upsAgreements: true,
     },
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -549,7 +549,7 @@ const shippo = new ShippoCore({
 
 async function run() {
   const res = await carrierAccountsRegister(shippo, {
-    carrier: "correos",
+    carrier: "ups",
     parameters: {
       billingAddressCity: "San Francisco",
       billingAddressCountryIso2: "US",
@@ -568,7 +568,7 @@ async function run() {
       pickupAddressStreet1: "731 Market St",
       pickupAddressStreet2: "STE 200",
       pickupAddressZip: "94103",
-      upsAgreements: false,
+      upsAgreements: true,
     },
   });
 
@@ -579,7 +579,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -621,9 +621,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.carrierAccounts.getRegistrationStatus("usps");
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -654,7 +654,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();

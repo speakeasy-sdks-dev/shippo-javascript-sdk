@@ -29,8 +29,7 @@
 ```typescript
 import { ServiceLevelRoyalMailEnum } from "shippo/models/components";
 
-let value: ServiceLevelRoyalMailEnum =
-  "royal_mail_special_delivery_guaranteed_1pm";
+let value: ServiceLevelRoyalMailEnum = "royal_mail_signed_for_second_class";
 ```
 
 ## Values

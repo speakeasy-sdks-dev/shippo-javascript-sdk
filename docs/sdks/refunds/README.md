@@ -28,9 +28,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.refunds.create("915d94940ea54c3a80cbfa328722f5a1", false);
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -61,7 +61,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -104,9 +104,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.refunds.list();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -137,7 +137,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -178,9 +178,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.refunds.get("<value>");
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -211,7 +211,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();

@@ -6,8 +6,7 @@
 import { LiveRateCreateRequest } from "shippo/models/components";
 
 let value: LiveRateCreateRequest = {
-  addressFrom: "<value>",
-  addressTo: {
+  addressFrom: {
     name: "Shwan Ippotle",
     company: "Shippo",
     street1: "215 Clayton St.",
@@ -23,6 +22,7 @@ let value: LiveRateCreateRequest = {
     metadata: "Customer ID 123456",
     validate: true,
   },
+  addressTo: "<value>",
   lineItems: [
     {
       currency: "USD",

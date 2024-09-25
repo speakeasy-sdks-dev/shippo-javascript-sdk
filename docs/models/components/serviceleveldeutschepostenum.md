@@ -19,7 +19,7 @@
 ```typescript
 import { ServiceLevelDeutschePostEnum } from "shippo/models/components";
 
-let value: ServiceLevelDeutschePostEnum = "deutsche_post_postkarte";
+let value: ServiceLevelDeutschePostEnum = "deutsche_post_grossbrief";
 ```
 
 ## Values

@@ -35,9 +35,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.userParcelTemplates.list();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -68,7 +68,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -118,9 +118,9 @@ async function run() {
     weight: "12",
     weightUnit: "lb",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -154,7 +154,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -196,6 +196,8 @@ const shippo = new Shippo({
 
 async function run() {
   await shippo.userParcelTemplates.delete("<value>");
+
+
 }
 
 run();
@@ -268,9 +270,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.userParcelTemplates.get("<value>");
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -301,7 +303,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -351,9 +353,9 @@ async function run() {
     weightUnit: "lb",
     width: "8",
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -392,7 +394,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();

@@ -24,10 +24,7 @@ let value: CreateParcelRequestBody = {
   metadata: "Customer ID 123456",
   massUnit: "lb",
   weight: "1",
-  distanceUnit: "in",
-  height: "1",
-  length: "1",
-  width: "1",
+  template: "couriersplease_1kg_satchel",
 };
 ```
 

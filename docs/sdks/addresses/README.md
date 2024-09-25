@@ -29,9 +29,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.addresses.list();
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -62,7 +62,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -120,9 +120,9 @@ async function run() {
     metadata: "Customer ID 123456",
     validate: true,
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -168,7 +168,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -210,9 +210,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.addresses.get("<value>");
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -243,7 +243,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -285,9 +285,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.addresses.validate("<value>");
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -318,7 +318,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();

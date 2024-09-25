@@ -257,10 +257,10 @@ let value: Shipment = {
       text: "UPS API did not respond. Please try again in a few minutes.",
     },
   ],
-  objectCreated: new Date("2024-08-09T11:11:16.127Z"),
+  objectCreated: new Date("2024-12-30T17:40:17.979Z"),
   objectId: "adcfdddf8ec64b84ad22772bce3ea37a",
   objectOwner: "pp@gmail.com",
-  objectUpdated: new Date("2022-06-28T02:12:50.953Z"),
+  objectUpdated: new Date("2022-06-13T19:05:17.540Z"),
   parcels: [
     {
       extra: {
@@ -298,7 +298,7 @@ let value: Shipment = {
       currencyLocal: "USD",
       arrivesBy: "08:30:00",
       attributes: [
-        "CHEAPEST",
+        "FASTEST",
       ],
       carrierAccount: "078870331023437cb917f5187429b093",
       durationTerms: "Delivery in 1 to 3 business days",
@@ -311,7 +311,7 @@ let value: Shipment = {
           text: "UPS API did not respond. Please try again in a few minutes.",
         },
       ],
-      objectCreated: new Date("2022-05-16T16:57:38.984Z"),
+      objectCreated: new Date("2022-06-28T02:12:50.953Z"),
       objectId: "adcfdddf8ec64b84ad22772bce3ea37a",
       objectOwner: "pp@gmail.com",
       provider: "USPS",

@@ -259,10 +259,10 @@ let value: ShipmentPaginatedList = {
           text: "UPS API did not respond. Please try again in a few minutes.",
         },
       ],
-      objectCreated: new Date("2024-10-04T18:04:14.419Z"),
+      objectCreated: new Date("2024-02-11T11:05:07.085Z"),
       objectId: "adcfdddf8ec64b84ad22772bce3ea37a",
       objectOwner: "pp@gmail.com",
-      objectUpdated: new Date("2024-02-22T19:24:11.316Z"),
+      objectUpdated: new Date("2022-04-20T20:22:04.958Z"),
       parcels: [
         {
           extra: {
@@ -314,7 +314,7 @@ let value: ShipmentPaginatedList = {
                 "UPS API did not respond. Please try again in a few minutes.",
             },
           ],
-          objectCreated: new Date("2022-06-13T19:05:17.540Z"),
+          objectCreated: new Date("2024-02-22T19:24:11.316Z"),
           objectId: "adcfdddf8ec64b84ad22772bce3ea37a",
           objectOwner: "pp@gmail.com",
           provider: "USPS",

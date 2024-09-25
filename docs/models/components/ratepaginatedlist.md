@@ -29,7 +29,7 @@ let value: RatePaginatedList = {
           text: "UPS API did not respond. Please try again in a few minutes.",
         },
       ],
-      objectCreated: new Date("2022-04-20T20:22:04.958Z"),
+      objectCreated: new Date("2024-06-02T14:07:36.077Z"),
       objectId: "adcfdddf8ec64b84ad22772bce3ea37a",
       objectOwner: "pp@gmail.com",
       provider: "USPS",

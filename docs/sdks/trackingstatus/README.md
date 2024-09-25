@@ -36,9 +36,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.trackingStatus.create("usps", "9205590164917312751089", "Order 000123");
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -69,7 +69,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -113,9 +113,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.trackingStatus.get("<value>", "<value>");
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -146,7 +146,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
