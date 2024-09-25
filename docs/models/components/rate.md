@@ -12,7 +12,7 @@ let value: Rate = {
   currencyLocal: "USD",
   arrivesBy: "08:30:00",
   attributes: [
-    "CHEAPEST",
+    "BESTVALUE",
   ],
   carrierAccount: "078870331023437cb917f5187429b093",
   durationTerms: "Delivery in 1 to 3 business days",
@@ -25,7 +25,7 @@ let value: Rate = {
       text: "UPS API did not respond. Please try again in a few minutes.",
     },
   ],
-  objectCreated: new Date("2023-04-23T16:59:27.579Z"),
+  objectCreated: new Date("2023-07-26T01:20:48.803Z"),
   objectId: "adcfdddf8ec64b84ad22772bce3ea37a",
   objectOwner: "pp@gmail.com",
   provider: "USPS",

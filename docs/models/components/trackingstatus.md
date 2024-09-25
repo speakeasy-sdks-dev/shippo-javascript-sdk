@@ -14,9 +14,9 @@ let value: TrackingStatus = {
     state: "NV",
     zip: "89101",
   },
-  objectCreated: new Date("2023-09-16T17:37:32.983Z"),
-  objectId: "<value>",
-  objectUpdated: new Date("2023-03-23T06:32:58.021Z"),
+  objectCreated: new Date("2023-11-04T21:45:37.821Z"),
+  objectId: "<id>",
+  objectUpdated: new Date("2023-08-11T01:17:06.903Z"),
   status: "DELIVERED",
   substatus: {
     code: "information_received",

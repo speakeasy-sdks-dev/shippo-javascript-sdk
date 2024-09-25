@@ -6,8 +6,8 @@
 import { InitiateOauth2SigninRequest } from "shippo/models/operations";
 
 let value: InitiateOauth2SigninRequest = {
-  carrierAccountObjectId: "<value>",
-  redirectUri: "https://trustworthy-drive.net",
+  carrierAccountObjectId: "<id>",
+  redirectUri: "https://windy-version.org",
 };
 ```
 

@@ -12,7 +12,7 @@
 ```typescript
 import { ServiceLevelParcelforceEnum } from "shippo/models/components";
 
-let value: ServiceLevelParcelforceEnum = "parcelforce_express48";
+let value: ServiceLevelParcelforceEnum = "parcelforce_expressam";
 ```
 
 ## Values

@@ -20,8 +20,7 @@
 ```typescript
 import { ServiceLevelCouriersPleaseEnum } from "shippo/models/components";
 
-let value: ServiceLevelCouriersPleaseEnum =
-  "couriersplease_gold_domestic_auth_to_leave";
+let value: ServiceLevelCouriersPleaseEnum = "couriersplease_road_express";
 ```
 
 ## Values

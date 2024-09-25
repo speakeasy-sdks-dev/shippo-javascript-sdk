@@ -26,7 +26,7 @@
 ```typescript
 import { ServiceLevelDPDUKEnum } from "shippo/models/components";
 
-let value: ServiceLevelDPDUKEnum = "dpd_uk_sunday_1030";
+let value: ServiceLevelDPDUKEnum = "dpd_uk_saturday_1030";
 ```
 
 ## Values

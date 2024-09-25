@@ -19,10 +19,10 @@ let value: ManifestPaginatedList = {
       documents: [
         "https://shippo-delivery.s3.amazonaws.com/0fadebf6f60c4aca95fa01bcc59c79ae.pdf?Signature=tlQU3RECwdHUQJQadwqg5bAzGFQ%3D&Expires=1402803835&AWSAccessKeyId=AKIAJTHP3LLFMYAWALIA",
       ],
-      objectCreated: new Date("2023-11-09T08:16:40.240Z"),
+      objectCreated: new Date("2022-03-17T19:22:07.134Z"),
       objectId: "adcfdddf8ec64b84ad22772bce3ea37a",
       objectOwner: "shippotle@shippo.com",
-      objectUpdated: new Date("2023-04-15T22:19:54.875Z"),
+      objectUpdated: new Date("2024-02-04T09:09:59.216Z"),
       status: "SUCCESS",
     },
   ],

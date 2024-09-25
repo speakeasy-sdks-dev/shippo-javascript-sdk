@@ -21,7 +21,8 @@
 ```typescript
 import { ServiceLevelGlobegisticsEnum } from "shippo/models/components";
 
-let value: ServiceLevelGlobegisticsEnum = "globegistics_epacket";
+let value: ServiceLevelGlobegisticsEnum =
+  "globegistics_priority_mail_express_international";
 ```
 
 ## Values

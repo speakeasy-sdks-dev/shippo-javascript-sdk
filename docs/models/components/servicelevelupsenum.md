@@ -34,7 +34,7 @@
 ```typescript
 import { ServiceLevelUPSEnum } from "shippo/models/components";
 
-let value: ServiceLevelUPSEnum = "ups_second_day_air_am";
+let value: ServiceLevelUPSEnum = "ups_3_day_select";
 ```
 
 ## Values

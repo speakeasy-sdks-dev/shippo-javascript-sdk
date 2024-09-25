@@ -14,7 +14,7 @@
 ```typescript
 import { ServiceLevelEvriUKEnum } from "shippo/models/components";
 
-let value: ServiceLevelEvriUKEnum = "hermes_uk_parcelshop_dropoff";
+let value: ServiceLevelEvriUKEnum = "hermes_uk_postable_nextday";
 ```
 
 ## Values

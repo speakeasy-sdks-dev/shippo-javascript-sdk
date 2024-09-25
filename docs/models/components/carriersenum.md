@@ -70,7 +70,7 @@
 ```typescript
 import { CarriersEnum } from "shippo/models/components";
 
-let value: CarriersEnum = "rr_donnelley";
+let value: CarriersEnum = "gls_us";
 ```
 
 ## Values
