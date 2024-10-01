@@ -43,7 +43,9 @@ export async function manifestsCreate(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: components.ManifestCreateRequest = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,

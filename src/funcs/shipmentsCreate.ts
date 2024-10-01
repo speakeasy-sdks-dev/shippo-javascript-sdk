@@ -43,7 +43,9 @@ export async function shipmentsCreate(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: components.ShipmentCreateRequest = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,

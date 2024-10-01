@@ -29,8 +29,7 @@ import { Result } from "../types/fp.js";
  */
 export async function refundsCreate(
   client: ShippoCore,
-  transaction: string,
-  async?: boolean | undefined,
+  request: components.RefundRequestBody,
   options?: RequestOptions,
 ): Promise<
   Result<
@@ -45,8 +44,7 @@ export async function refundsCreate(
   >
 > {
   const input: components.RefundRequestBody = {
-    async: async,
-    transaction: transaction,
+    request: request,
   };
 
   const parsed = safeParse(

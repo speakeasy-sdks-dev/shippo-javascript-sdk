@@ -17,14 +17,12 @@ export class Refunds extends ClientSDK {
    * Creates a new refund object.
    */
   async create(
-    transaction: string,
-    async?: boolean | undefined,
+    request: components.RefundRequestBody,
     options?: RequestOptions,
   ): Promise<components.Refund> {
     return unwrapAsync(refundsCreate(
       this,
-      transaction,
-      async,
+      request,
       options,
     ));
   }

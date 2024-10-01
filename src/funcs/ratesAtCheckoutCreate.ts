@@ -46,7 +46,9 @@ export async function ratesAtCheckoutCreate(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: components.LiveRateCreateRequest = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,

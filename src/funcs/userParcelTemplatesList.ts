@@ -18,7 +18,6 @@ import {
 } from "../models/errors/httpclienterrors.js";
 import { SDKError } from "../models/errors/sdkerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
-import * as operations from "../models/operations/index.js";
 import { Result } from "../types/fp.js";
 
 /**
@@ -42,9 +41,6 @@ export async function userParcelTemplatesList(
     | ConnectionError
   >
 > {
-  const input: operations.ListUserParcelTemplatesRequest = {};
-  void input; // request input is unused
-
   const path = pathToFunc("/user-parcel-templates")();
 
   const headers = new Headers({

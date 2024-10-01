@@ -341,9 +341,9 @@ async function run() {
       },
     ],
   });
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -677,7 +677,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -698,10 +698,9 @@ run();
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## get
 
@@ -722,9 +721,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.batches.get("<value>");
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -755,7 +754,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -776,10 +775,9 @@ run();
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## addShipments
 
@@ -796,7 +794,7 @@ const shippo = new Shippo({
 });
 
 async function run() {
-  const result = await shippo.batches.addShipments("<value>", [
+  const result = await shippo.batches.addShipments([
     {
       carrierAccount: "a4391cd4ab974f478f55dc08b5c8e3b3",
       metadata: "SHIPMENT #1",
@@ -1445,10 +1443,10 @@ async function run() {
         ],
       },
     },
-  ]);
-  
+  ], "<value>");
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -1470,7 +1468,7 @@ const shippo = new ShippoCore({
 });
 
 async function run() {
-  const res = await batchesAddShipments(shippo, "<value>", [
+  const res = await batchesAddShipments(shippo, [
     {
       carrierAccount: "a4391cd4ab974f478f55dc08b5c8e3b3",
       metadata: "SHIPMENT #1",
@@ -2119,7 +2117,7 @@ async function run() {
         ],
       },
     },
-  ]);
+  ], "<value>");
 
   if (!res.ok) {
     throw res.error;
@@ -2128,7 +2126,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -2150,10 +2148,9 @@ run();
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## purchase
 
@@ -2174,9 +2171,9 @@ const shippo = new Shippo({
 
 async function run() {
   const result = await shippo.batches.purchase("<value>");
-  
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -2207,7 +2204,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -2228,10 +2225,9 @@ run();
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## removeShipments
 
@@ -2248,14 +2244,14 @@ const shippo = new Shippo({
 });
 
 async function run() {
-  const result = await shippo.batches.removeShipments("<value>", [
+  const result = await shippo.batches.removeShipments([
     "<value>",
     "<value>",
     "<value>",
-  ]);
-  
+  ], "<value>");
+
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -2277,11 +2273,11 @@ const shippo = new ShippoCore({
 });
 
 async function run() {
-  const res = await batchesRemoveShipments(shippo, "<value>", [
+  const res = await batchesRemoveShipments(shippo, [
     "<value>",
     "<value>",
     "<value>",
-  ]);
+  ], "<value>");
 
   if (!res.ok) {
     throw res.error;
@@ -2290,7 +2286,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -2312,6 +2308,6 @@ run();
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |

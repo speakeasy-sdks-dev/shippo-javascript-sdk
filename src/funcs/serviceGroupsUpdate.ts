@@ -43,7 +43,9 @@ export async function serviceGroupsUpdate(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: components.ServiceGroupUpdateRequest | undefined = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,

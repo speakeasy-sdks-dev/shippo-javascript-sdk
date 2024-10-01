@@ -29,7 +29,7 @@ import { Result } from "../types/fp.js";
  */
 export async function ratesAtCheckoutUpdateDefaultParcelTemplate(
   client: ShippoCore,
-  objectId?: string | undefined,
+  request?: components.DefaultParcelTemplateUpdateRequest | undefined,
   options?: RequestOptions,
 ): Promise<
   Result<
@@ -44,7 +44,7 @@ export async function ratesAtCheckoutUpdateDefaultParcelTemplate(
   >
 > {
   const input: components.DefaultParcelTemplateUpdateRequest | undefined = {
-    objectId: objectId,
+    request: request,
   };
 
   const parsed = safeParse(

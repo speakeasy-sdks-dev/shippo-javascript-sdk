@@ -43,7 +43,9 @@ export async function serviceGroupsCreate(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: components.ServiceGroupCreateRequest = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,

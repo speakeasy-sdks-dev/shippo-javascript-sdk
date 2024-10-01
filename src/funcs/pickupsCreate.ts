@@ -43,7 +43,9 @@ export async function pickupsCreate(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: components.PickupBase = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,

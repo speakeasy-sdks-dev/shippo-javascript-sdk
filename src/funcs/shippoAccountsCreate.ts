@@ -43,7 +43,9 @@ export async function shippoAccountsCreate(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: components.ShippoAccountUpdateRequest = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,

@@ -48,10 +48,8 @@ export async function carrierAccountsList(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.ListCarrierAccountsRequest$outboundSchema.parse(value),
     "Input validation failed",

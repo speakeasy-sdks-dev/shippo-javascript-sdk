@@ -43,7 +43,9 @@ export async function ordersCreate(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: components.OrderCreateRequest = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,

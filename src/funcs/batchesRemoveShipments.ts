@@ -30,8 +30,8 @@ import { Result } from "../types/fp.js";
  */
 export async function batchesRemoveShipments(
   client: ShippoCore,
-  batchId: string,
   requestBody: Array<string>,
+  batchId: string,
   options?: RequestOptions,
 ): Promise<
   Result<
@@ -46,8 +46,8 @@ export async function batchesRemoveShipments(
   >
 > {
   const input: operations.RemoveShipmentsFromBatchRequest = {
-    batchId: batchId,
     requestBody: requestBody,
+    batchId: batchId,
   };
 
   const parsed = safeParse(

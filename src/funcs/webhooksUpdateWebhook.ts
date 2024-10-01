@@ -30,8 +30,8 @@ import { Result } from "../types/fp.js";
  */
 export async function webhooksUpdateWebhook(
   client: ShippoCore,
-  webhookId: string,
   webhookUpdateRequest: components.WebhookUpdateRequest,
+  webhookId: string,
   options?: RequestOptions,
 ): Promise<
   Result<
@@ -46,8 +46,8 @@ export async function webhooksUpdateWebhook(
   >
 > {
   const input: operations.UpdateWebhookRequest = {
-    webhookId: webhookId,
     webhookUpdateRequest: webhookUpdateRequest,
+    webhookId: webhookId,
   };
 
   const parsed = safeParse(

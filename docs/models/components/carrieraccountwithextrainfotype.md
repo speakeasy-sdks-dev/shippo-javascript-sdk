@@ -7,7 +7,7 @@ Authentication method used by this account.
 ```typescript
 import { CarrierAccountWithExtraInfoType } from "shippo/models/components";
 
-let value: CarrierAccountWithExtraInfoType = "default";
+let value: CarrierAccountWithExtraInfoType = "oauth";
 ```
 
 ## Values

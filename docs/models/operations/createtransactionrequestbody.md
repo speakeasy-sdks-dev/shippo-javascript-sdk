@@ -2,12 +2,24 @@
 
 Examples.
 
-## Example Usage
+
+## Supported Types
+
+### `components.TransactionCreateRequest`
 
 ```typescript
-import { CreateTransactionRequestBody } from "shippo/models/operations";
+const value: components.TransactionCreateRequest = {
+  async: false,
+  labelFileType: "PDF_4x6",
+  metadata: "Order ID #12345",
+  rate: "ec9f0d3adc9441449c85d315f0997fd5",
+};
+```
 
-let value: CreateTransactionRequestBody = {
+### `components.InstantTransactionCreateRequest`
+
+```typescript
+const value: components.InstantTransactionCreateRequest = {
   async: false,
   carrierAccount: "b741b99f95e841639b54272834bc478c",
   labelFileType: "PDF",
@@ -149,22 +161,7 @@ let value: CreateTransactionRequestBody = {
       metadata: "Customer ID 123456",
       validate: true,
     },
-    addressTo: {
-      name: "Shwan Ippotle",
-      company: "Shippo",
-      street1: "215 Clayton St.",
-      street3: "",
-      streetNo: "",
-      city: "San Francisco",
-      state: "CA",
-      zip: "94117",
-      country: "US",
-      phone: "+1 555 341 9393",
-      email: "shippotle@shippo.com",
-      isResidential: true,
-      metadata: "Customer ID 123456",
-      validate: true,
-    },
+    addressTo: "d799c2679e644279b59fe661ac8fa489",
     customsDeclaration: {
       b13aFilingOption: "FILED_ELECTRONICALLY",
       certify: true,
@@ -227,41 +224,9 @@ let value: CreateTransactionRequestBody = {
       "73f706f4bdb94b54a337563840ce52b0",
     ],
     parcels: [
-      {
-        extra: {
-          cod: {
-            amount: "5.5",
-            currency: "USD",
-            paymentMethod: "CASH",
-          },
-          insurance: {
-            amount: "5.5",
-            content: "Laptop",
-            currency: "USD",
-            provider: "UPS",
-          },
-        },
-        metadata: "Customer ID 123456",
-        massUnit: "lb",
-        weight: "1",
-        template: "UPS_MI_BPM_Parcel",
-      },
+      "<value>",
     ],
   },
 };
-```
-
-## Supported Types
-
-### `components.TransactionCreateRequest`
-
-```typescript
-const value: components.TransactionCreateRequest = /* values here */
-```
-
-### `components.InstantTransactionCreateRequest`
-
-```typescript
-const value: components.InstantTransactionCreateRequest = /* values here */
 ```
 

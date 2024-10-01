@@ -29,9 +29,7 @@ import { Result } from "../types/fp.js";
  */
 export async function trackingStatusCreate(
   client: ShippoCore,
-  carrier: string,
-  trackingNumber: string,
-  metadata?: string | undefined,
+  request: components.TracksRequest,
   options?: RequestOptions,
 ): Promise<
   Result<
@@ -46,9 +44,7 @@ export async function trackingStatusCreate(
   >
 > {
   const input: components.TracksRequest = {
-    carrier: carrier,
-    metadata: metadata,
-    trackingNumber: trackingNumber,
+    request: request,
   };
 
   const parsed = safeParse(

@@ -43,7 +43,9 @@ export async function customsDeclarationsCreate(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: components.CustomsDeclarationCreateRequest = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,

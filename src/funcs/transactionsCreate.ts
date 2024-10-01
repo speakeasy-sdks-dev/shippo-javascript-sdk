@@ -44,7 +44,9 @@ export async function transactionsCreate(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: operations.CreateTransactionRequestBody = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,

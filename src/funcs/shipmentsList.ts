@@ -61,10 +61,8 @@ export async function shipmentsList(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => operations.ListShipmentsRequest$outboundSchema.parse(value),
     "Input validation failed",
   );

@@ -2,12 +2,19 @@
 
 Object ID for an existing User Parcel Template OR a fully formed Parcel object.
 
-## Example Usage
+
+## Supported Types
+
+### `string`
 
 ```typescript
-import { LiveRateCreateRequestParcel } from "shippo/models/components";
+const value: string = "5df144dca289442cv7a06";
+```
 
-let value: LiveRateCreateRequestParcel = {
+### `components.Parcel`
+
+```typescript
+const value: components.Parcel = {
   extra: {
     cod: {
       amount: "5.5",
@@ -34,19 +41,5 @@ let value: LiveRateCreateRequestParcel = {
   objectState: "VALID",
   objectUpdated: new Date("2014-07-09T02:19:13.174Z"),
 };
-```
-
-## Supported Types
-
-### `string`
-
-```typescript
-const value: string = /* values here */
-```
-
-### `components.Parcel`
-
-```typescript
-const value: components.Parcel = /* values here */
 ```
 

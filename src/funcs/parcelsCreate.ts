@@ -44,7 +44,9 @@ export async function parcelsCreate(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: operations.CreateParcelRequestBody = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,

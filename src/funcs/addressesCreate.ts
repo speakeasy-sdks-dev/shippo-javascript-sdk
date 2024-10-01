@@ -43,7 +43,9 @@ export async function addressesCreate(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: components.AddressCreateRequest = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,

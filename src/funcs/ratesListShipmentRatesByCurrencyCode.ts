@@ -50,10 +50,8 @@ export async function ratesListShipmentRatesByCurrencyCode(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) =>
       operations.ListShipmentRatesByCurrencyCodeRequest$outboundSchema.parse(
         value,

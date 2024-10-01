@@ -43,7 +43,9 @@ export async function carrierAccountsCreate(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: components.ConnectExistingOwnAccountRequest = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,

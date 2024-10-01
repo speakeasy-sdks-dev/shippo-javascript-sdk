@@ -19,7 +19,6 @@ import {
 } from "../models/errors/httpclienterrors.js";
 import { SDKError } from "../models/errors/sdkerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
-import * as operations from "../models/operations/index.js";
 import { Result } from "../types/fp.js";
 
 /**
@@ -43,9 +42,6 @@ export async function serviceGroupsList(
     | ConnectionError
   >
 > {
-  const input: operations.ListServiceGroupsRequest = {};
-  void input; // request input is unused
-
   const path = pathToFunc("/service-groups")();
 
   const headers = new Headers({

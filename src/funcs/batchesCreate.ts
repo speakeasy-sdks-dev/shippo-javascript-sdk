@@ -43,7 +43,9 @@ export async function batchesCreate(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: components.BatchCreateRequest = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,

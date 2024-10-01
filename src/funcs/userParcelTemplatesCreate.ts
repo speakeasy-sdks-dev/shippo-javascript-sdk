@@ -49,7 +49,9 @@ export async function userParcelTemplatesCreate(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: components.UserParcelTemplateCreateRequest = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,

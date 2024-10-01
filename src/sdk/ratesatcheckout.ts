@@ -53,12 +53,12 @@ export class RatesAtCheckout extends ClientSDK {
    * Update the currently configured default parcel template for live rates. The object_id in the request payload should identify the user parcel template to be the new default.
    */
   async updateDefaultParcelTemplate(
-    objectId?: string | undefined,
+    request?: components.DefaultParcelTemplateUpdateRequest | undefined,
     options?: RequestOptions,
   ): Promise<components.DefaultParcelTemplate> {
     return unwrapAsync(ratesAtCheckoutUpdateDefaultParcelTemplate(
       this,
-      objectId,
+      request,
       options,
     ));
   }

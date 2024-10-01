@@ -44,7 +44,9 @@ export async function carrierAccountsRegister(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: operations.RegisterCarrierAccountRequestBody = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,

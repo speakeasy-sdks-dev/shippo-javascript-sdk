@@ -6,7 +6,7 @@
 import { AddShipmentsToBatchRequest } from "shippo/models/operations";
 
 let value: AddShipmentsToBatchRequest = {
-  batchId: "<value>",
+  batchId: "<id>",
   requestBody: [
     {
       carrierAccount: "a4391cd4ab974f478f55dc08b5c8e3b3",
@@ -116,7 +116,8 @@ let value: AddShipmentsToBatchRequest = {
         },
         metadata: "Customer ID 123456",
         shipmentDate: "2021-03-22T12:00:00Z",
-        addressFrom: {
+        addressFrom: "d799c2679e644279b59fe661ac8fa488",
+        addressReturn: {
           name: "Shwan Ippotle",
           company: "Shippo",
           street1: "215 Clayton St.",
@@ -132,7 +133,6 @@ let value: AddShipmentsToBatchRequest = {
           metadata: "Customer ID 123456",
           validate: true,
         },
-        addressReturn: "d799c2679e644279b59fe661ac8fa488",
         addressTo: "d799c2679e644279b59fe661ac8fa489",
         customsDeclaration: "adcfdddf8ec64b84ad22772bce3ea37a",
         carrierAccounts: [

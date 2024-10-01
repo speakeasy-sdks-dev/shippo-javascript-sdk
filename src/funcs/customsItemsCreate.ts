@@ -43,7 +43,9 @@ export async function customsItemsCreate(
     | ConnectionError
   >
 > {
-  const input = request;
+  const input: components.CustomsItemCreateRequest = {
+    request: request,
+  };
 
   const parsed = safeParse(
     input,
